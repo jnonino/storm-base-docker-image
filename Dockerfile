@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-LABEL maintainer="Julian Nonino <noninojulian@outlook.com>"
+LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Install required tools, tar, curl and Java JRE
 # Install dependencies for Storm and SupervisorD
