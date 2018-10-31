@@ -10,7 +10,7 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Storm
-ENV STORM_VERSION 1.1.1
+ENV STORM_VERSION 1.2.2
 RUN curl -O http://apache.mirror.digionline.de/storm/apache-storm-$STORM_VERSION/apache-storm-$STORM_VERSION.tar.gz && \
     tar -xvf apache-storm-$STORM_VERSION.tar.gz && \
     rm -rf apache-storm-$STORM_VERSION.tar.gz && \
