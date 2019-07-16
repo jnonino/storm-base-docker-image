@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # Install required tools, tar, curl and Java JRE
@@ -10,8 +10,8 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Storm
-ENV STORM_VERSION 1.2.2
-RUN curl -O http://apache.mirror.digionline.de/storm/apache-storm-$STORM_VERSION/apache-storm-$STORM_VERSION.tar.gz && \
+ENV STORM_VERSION 2.0.0
+RUN curl -O https://www.apache.org/dyn/closer.lua/storm/apache-storm-$STORM_VERSION/apache-storm-$STORM_VERSION.tar.gz && \
     tar -xvf apache-storm-$STORM_VERSION.tar.gz && \
     rm -rf apache-storm-$STORM_VERSION.tar.gz && \
     mv apache-storm-$STORM_VERSION storm && \
