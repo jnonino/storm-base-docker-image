@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 
 # Install Storm
 ENV STORM_VERSION 2.0.0
-RUN curl -O https://www.apache.org/dyn/closer.lua/storm/apache-storm-$STORM_VERSION/apache-storm-$STORM_VERSION.tar.gz && \
+RUN curl -O http://apache.mirror.anlx.net/storm/apache-storm-$STORM_VERSION/apache-storm-$STORM_VERSION.tar.gz && \
     tar -xvf apache-storm-$STORM_VERSION.tar.gz && \
     rm -rf apache-storm-$STORM_VERSION.tar.gz && \
     mv apache-storm-$STORM_VERSION storm && \
